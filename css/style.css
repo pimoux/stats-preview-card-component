@@ -46,7 +46,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100% - 4px);
+  height: 100%;
   width: 100%;
   opacity: 0.5;
   border-top-left-radius: 0.625rem;
@@ -56,7 +56,7 @@
 .title {
   color: white;
   font-family: "Inter", sans-serif;
-  margin-top: 2.3rem;
+  margin-top: 2.55rem;
   text-align: center;
   font-size: 27px;
   padding: 0 1.5rem;
@@ -105,5 +105,71 @@
   font-size: 12.5px;
   letter-spacing: 0.6px;
   margin-right: 0.1rem;
+}
+
+.header-mobile {
+  display: block;
+}
+
+.header-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .header-mobile {
+    display: none;
+  }
+  .header-desktop {
+    display: block;
+  }
+  .card {
+    width: 1110px;
+    height: 446px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .header-desktop {
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+  }
+  .card-image-container::before {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+  }
+  .stats {
+    padding-left: 4.5rem;
+    padding-right: 3rem;
+  }
+  .title {
+    font-size: 35px;
+    text-align: left;
+    margin-top: 4.5rem;
+    padding: 0;
+  }
+  .paragraph {
+    text-align: left;
+    padding: 0;
+    padding-right: 5rem;
+    margin-top: 1.75rem;
+  }
+  .stats-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 2.75rem;
+    width: 77.5%;
+  }
+  .stat-value {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */
